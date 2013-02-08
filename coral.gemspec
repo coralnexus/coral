@@ -19,10 +19,12 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "coral.gemspec",
     "lib/coral.rb"
   ]
   s.homepage = "http://github.com/coraltech/ruby-coral"
