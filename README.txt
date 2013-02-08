@@ -1,4 +1,4 @@
-MPORTANT: This branch is not currently used.
+IMPORTANT: This branch is not currently used.
 
 Try checking out one of the {MAJOR}.{MINOR} branches.
 
