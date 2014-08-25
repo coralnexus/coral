@@ -14,3 +14,10 @@
   
 require 'rubygems'
 require 'corl'
+
+#*******************************************************************************
+## Coral Meta Package
+##
+module Coral
+  VERSION = File.read(File.join(File.dirname(__FILE__), '..', 'VERSION'))
+end

@@ -59,7 +59,7 @@ task :default => :spec
 #-------------------------------------------------------------------------------
 # Documentation
 
-version   = CORL.VERSION
+version   = Coral.VERSION
 doc_title = "coral #{version}"
 
 Rake::RDocTask.new do |rdoc|
