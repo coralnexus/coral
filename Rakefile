@@ -59,14 +59,8 @@ task :default => :spec
 #-------------------------------------------------------------------------------
 # Documentation
 
-version = CORL.VERSION
+version   = CORL.VERSION
 doc_title = "coral #{version}"
-
-class RDoc::Options
-  def template_dir_for(template)
-    File.join(File.dirname(__FILE__), 'rdoc', 'template')
-  end
-end
 
 Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_dir = File.join('rdoc', 'site', version)
