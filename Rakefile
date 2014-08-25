@@ -5,6 +5,8 @@ require 'rake'
 require 'bundler'
 require 'jeweler'
 require 'rspec/core/rake_task'
+require 'rdoc/task'
+require 'yard'
 
 require './lib/coral.rb'
 
@@ -34,6 +36,9 @@ Jeweler::Tasks.new do |gem|
   gem.description           = File.read('README.rdoc')
   gem.required_ruby_version = '>= 1.9.1'
   gem.has_rdoc              = false
+  gem.rdoc_options << '--title' << 'Coral Orchestration and Research Library (alias)' <<
+                      '--main' << 'README.rdoc' <<
+                      '--line-numbers'
   
   # Dependencies defined in Gemfile
 end
@@ -50,3 +55,36 @@ RSpec::Core::RakeTask.new(:spec, :tag) do |spec, task_args|
 end
 
 task :default => :spec
+
+#-------------------------------------------------------------------------------
+# Documentation
+
+version = CORL.VERSION
+doc_title = "coral #{version}"
+
+class RDoc::Options
+  def template_dir_for(template)
+    File.join(File.dirname(__FILE__), 'rdoc', 'template')
+  end
+end
+
+Rake::RDocTask.new do |rdoc|
+  rdoc.rdoc_dir = File.join('rdoc', 'site', version)
+  
+  rdoc.title = doc_title
+  rdoc.main  = 'README.rdoc'
+  
+  rdoc.options << '--line-numbers'
+  rdoc.options << '--all'
+  rdoc.options << '-w' << '2'
+  
+  rdoc.rdoc_files.include('*.rdoc')
+  rdoc.rdoc_files.include('lib/**/*.rb')
+end
+
+#---
+
+YARD::Rake::YardocTask.new do |ydoc|
+  ydoc.files   = [ '*.rdoc', 'lib/**/*.rb' ]
+  ydoc.options = [ "--output-dir yardoc", "--title '#{doc_title}'" ]
+end
