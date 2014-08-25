@@ -41,3 +41,14 @@ Jeweler::Tasks.new do |gem|
 end
 
 Jeweler::RubygemsDotOrgTasks.new
+
+#-------------------------------------------------------------------------------
+# Testing
+
+RSpec::Core::RakeTask.new(:spec, :tag) do |spec, task_args|
+  options = []
+  options << "--tag #{task_args[:tag]}" if task_args.is_a?(Array) && ! task_args[:tag].to_s.empty?
+  spec.rspec_opts = options.join(' ')
+end
+
+task :default => :spec
