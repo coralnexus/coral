@@ -63,12 +63,17 @@ version   = Coral.VERSION
 doc_title = "coral #{version}"
 
 Rake::RDocTask.new do |rdoc|
+  rdoc.rdoc_dir = File.join('rdoc', 'site', version)
+    
   rdoc.title = doc_title
   rdoc.main  = 'README.rdoc'
-  
+        
   rdoc.options << '--line-numbers'
   rdoc.options << '--all'
   rdoc.options << '-w' << '2'
+              
+  rdoc.rdoc_files.include('*.rdoc')
+  rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
 #---
