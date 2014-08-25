@@ -1,4 +1,4 @@
-== coral
+### Coral gem 
 
 This gem is simply a meta package that installs and requires the CORL gem.
 
@@ -6,10 +6,11 @@ Note:  CORL is still early in development!
 
 DO NOT USE IN PRODUCTION YET!!
 
+---
 
 Now you get to hear the story of two names.
 
-Short story first;  We switched to the CORL name (github.com/coralnexus/corl).
+Short story first;  We switched to the CORL name (http://github.com/coralnexus/corl).
 
 If your interested in why:
 
@@ -34,7 +35,7 @@ CORL is built.  All of our coral sub gems are integrated into these two.
 This gem exists only as a installer for people who accidentally spell coral the right
 way when trying to install the CORL system.  Use the CORL gem instead.
 
-== Copyright
+### Copyright
 
 Licensed under Apache license, version 2.  See LICENSE.txt for further details.
 
