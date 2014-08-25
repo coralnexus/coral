@@ -5,8 +5,6 @@ require 'rake'
 require 'bundler'
 require 'jeweler'
 require 'rspec/core/rake_task'
-require 'rdoc/task'
-require 'yard'
 
 require './lib/coral.rb'
 
