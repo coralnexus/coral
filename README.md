@@ -14,7 +14,7 @@ Short story first;  We switched to the CORL name (http://github.com/coralnexus/c
 
 If your interested in why:
 
-The original name of the CORL project was Coral, and we were exited when we found 
+The original name of the CORL project was Coral, and we were excited when we found 
 the Ruby gem name "coral" available.  Our first versions of our CORL system were
 named coral_core, coral_cloud, coral_vagrant, coral_plan, and many more were planned.
 We created a meta gem (this one) to install a core combination of gems.  
