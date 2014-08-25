@@ -31,6 +31,7 @@ Gem::Specification.new do |s|
   ]
   s.homepage = "http://github.com/coraltech/coral"
   s.licenses = ["Apache License, Version 2.0"]
+  s.rdoc_options = ["--title", "Coral Orchestration and Research Library (alias)", "--main", "README.rdoc", "--line-numbers"]
   s.required_ruby_version = Gem::Requirement.new(">= 1.9.1")
   s.rubyforge_project = "coral"
   s.rubygems_version = "2.2.2"
